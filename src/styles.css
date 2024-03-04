@@ -1,0 +1,83 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+  text-align: center;
+  font-size: 40px;
+}
+
+.big-weather-emoji {
+  display: block;
+  margin: 30px auto;
+  font-size: 80px;
+  width: 120px;
+  text-align: center;
+  border: 2px solid darkgrey;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  font-size: 14px;
+}
+
+.left-column {
+  justify-self: center;
+  text-align: center;
+  margin-left: 50px;
+  line-height: 27px;
+}
+
+.middle-column {
+  justify-self: center;
+  align-self: center;
+  margin-left: 30px;
+}
+
+.right-column {
+  justify-self: center;
+  text-align: center;
+  margin-right: 50px;
+  line-height: 27px;
+}
+
+.main-temp {
+  font-size: 50px;
+}
+
+.day-time {
+  padding-top: 10px;
+}
+
+.search {
+  text-align: center;
+  border-bottom: 0.5px solid #9e9ebf;
+  margin: 30px;
+  padding-bottom: 25px;
+  font-size: 14px;
+}
+
+.search-field {
+  background-color: rgba(251, 224, 234, 0.3);
+  border: 0;
+  font-size: 16px;
+  padding: 15px 6px 15px 15px;
+  border-radius: 6px;
+  margin: 20px 6px 20px 20px;
+  width: 40%;
+}
+
+.search-button {
+  background-color: rgba(251, 224, 234, 0.6);
+  margin-left: 5px;
+  font-size: 16px;
+  color: #52658b;
+  border: 0;
+  border-radius: 5px;
+  padding: 13px;
+}
