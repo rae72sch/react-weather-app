@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+// add {useState} back later
 
 export default function Search() {
-  let [city, setCity] = useState("");
+  // let [city, setCity] = useState("");
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  // }
 
-  function updateCity(event) {
-    setCity(event.target.value);
-  }
+  // function updateCity(event) {
+  //   setCity(event.target.value);
+  // }
 
   return (
     <div className="search">
