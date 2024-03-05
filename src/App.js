@@ -3,6 +3,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Search from "./Search";
 import Forecast from "./Forecast";
+import Footer from "./Footer";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <Main />
       <Search />
       <Forecast />
+      <Footer />
     </div>
   );
 }
