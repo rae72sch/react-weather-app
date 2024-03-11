@@ -1,21 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./Search.css";
-// add {useState} back later
 
 export default function Search() {
-  // let [city, setCity] = useState("");
+  let [city, setCity] = useState("Cork");
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  // }
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
 
-  // function updateCity(event) {
-  //   setCity(event.target.value);
-  // }
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
 
   return (
     <div className="search">
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <label for="city-search-field"></label>
         <input
           type="text"
