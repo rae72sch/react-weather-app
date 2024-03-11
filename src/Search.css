@@ -1,0 +1,27 @@
+.search {
+  text-align: center;
+  border-bottom: 0.5px solid #9e9ebf;
+  margin: 30px;
+  padding-bottom: 25px;
+  font-size: 14px;
+}
+
+.search-field {
+  background-color: rgba(251, 224, 234, 0.3);
+  border: 0;
+  font-size: 16px;
+  padding: 15px 6px 15px 15px;
+  border-radius: 6px;
+  margin: 20px 6px 20px 20px;
+  width: 40%;
+}
+
+.search-button {
+  background-color: rgba(251, 224, 234, 0.6);
+  margin-left: 5px;
+  font-size: 16px;
+  color: #52658b;
+  border: 0;
+  border-radius: 5px;
+  padding: 13px;
+}

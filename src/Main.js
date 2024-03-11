@@ -1,4 +1,5 @@
 import React from "react";
+import "./Main.css";
 
 export default function Main() {
   return (
@@ -10,7 +11,7 @@ export default function Main() {
       </div>
       <div className="middle-column">
         <span className="main-temp">6&deg;c</span>
-        <div className="day-time">Tuesday 10:20</div>
+        <div className="day-time">Friday 10:20</div>
       </div>
       <div class="right-column">
         Humidity: 84%

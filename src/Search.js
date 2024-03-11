@@ -1,4 +1,5 @@
 import React from "react";
+import "./Search.css";
 // add {useState} back later
 
 export default function Search() {
@@ -18,7 +19,7 @@ export default function Search() {
         <label for="city-search-field"></label>
         <input
           type="text"
-          placeholder="Search for a city"
+          placeholder="Search for a city..."
           class="search-field"
           required
         />

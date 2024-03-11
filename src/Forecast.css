@@ -1,0 +1,5 @@
+.weather-five-day {
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-evenly;
+}

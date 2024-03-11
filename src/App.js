@@ -2,7 +2,7 @@ import "./styles.css";
 import Header from "./Header";
 import Main from "./Main";
 import Search from "./Search";
-import Forecast from "./Forecast";
+// import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
       <Header />
       <Main />
       <Search />
-      <Forecast />
+      {/* <Forecast /> */}
       <Footer />
     </div>
   );
