@@ -1,31 +1,61 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Main from "./Main";
 import "./Search.css";
 
-export default function Search() {
-  let [city, setCity] = useState("Cork");
+export default function Search(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false});
+  const [city, setCity] = useState(props.defaultCity);
+
+  function handleResponse(response) {
+    setWeatherData({
+      ready: true,
+      icon: response.data.weather[0].icon,
+      city: response.data.name,
+      description: response.data.weather[0].description,
+      feel: response.data.main.feels_like,
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      date: new Date(response.data.dt * 1000),
+    });
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
+    Search();
   }
 
   function updateCity(event) {
     setCity(event.target.value);
   }
 
-  return (
-    <div className="search">
-      <form onSubmit={handleSubmit}>
-        <label for="city-search-field"></label>
-        <input
-          type="text"
-          placeholder="Search for a city..."
-          class="search-field"
-          required
-        />
-        <input type="submit" value="Search" class="search-button" />
-      </form>
-      <div className="SearchResult"></div>
-    </div>
-  );
+  function search() {
+    const apiKey = "4e5a5a0ec22c540ea18c26122f95105d";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  if (weatherData.ready) {
+    return (
+      <div className="search">
+        <Main data={weatherData} />
+        <form onSubmit={handleSubmit}>
+          <label for="city-search-field"></label>
+          <input
+            type="text"
+            placeholder="Search for a city..."
+            class="search-field"
+            autoFocus="on"
+            onChange={updateCity}
+            required
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </div>
+    );
+  } else {
+    search();
+    return "Loading...";
+  }
 }
