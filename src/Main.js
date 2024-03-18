@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import FeelsLikeRounded from "./FeelsLikeRounded";
 import MainTemperature from "./MainTemperature";
 import "./Main.css";

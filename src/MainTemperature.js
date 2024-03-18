@@ -4,12 +4,12 @@ export default function MainTemperature(props) {
   const [unit, setUnit] = useState("celsius");
 
   function showFarenheit(event) {
-    event.preventDefaut();
+    event.preventDefault();
     setUnit("farenheit");
   }
 
   function showCelsius(event) {
-    event.preventDefaut();
+    event.preventDefault();
     setUnit("celsius");
   }
 
@@ -22,7 +22,9 @@ export default function MainTemperature(props) {
       <div className="Temperature">
         {Math.round(props.celsius)}
         <span className="unit">
-          °c |
+          °c
+        </span>
+        <span className="smallUnit">
           <a href="/" onClick={showFarenheit}>
             °f
           </a>
