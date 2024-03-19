@@ -37,5 +37,5 @@ export default function WeatherIcon(props) {
     "50n": foggy,
   };
 
-  return <img className="icon" src={codeMapping[props.code]} />
+  return <img className="icon mt-4" src={codeMapping[props.code]} />
 }

@@ -5,7 +5,7 @@ import Main from "./Main";
 import "./Search.css";
 
 export default function Search(props) {
-  const [weatherData, setWeatherData] = useState({ ready: false});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
@@ -46,16 +46,15 @@ export default function Search(props) {
         <div className="search">
           <Main data={weatherData} />
           <form onSubmit={handleSubmit}>
-            <label for="city-search-field"></label>
             <input
-              type="text"
+              type="search"
               placeholder="Search for a city..."
-              class="search-field"
+              className="search-field"
               autoFocus="on"
               onChange={updateCity}
               required
             />
-            <input type="submit" value="Search" class="search-button" />
+            <input type="submit" value="Search" className="search-button" />
           </form>
         </div>
       </div>
