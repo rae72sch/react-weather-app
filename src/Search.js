@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Header from "./Header";
 import Main from "./Main";
 import "./Search.css";
 
@@ -38,20 +39,25 @@ export default function Search(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="search">
-        <Main data={weatherData} />
-        <form onSubmit={handleSubmit}>
-          <label for="city-search-field"></label>
-          <input
-            type="text"
-            placeholder="Search for a city..."
-            class="search-field"
-            autoFocus="on"
-            onChange={updateCity}
-            required
-          />
-          <input type="submit" value="Search" class="search-button" />
-        </form>
+      <div className="content">
+        <div className="header">
+          <Header data={weatherData} />
+        </div>
+        <div className="search">
+          <Main data={weatherData} />
+          <form onSubmit={handleSubmit}>
+            <label for="city-search-field"></label>
+            <input
+              type="text"
+              placeholder="Search for a city..."
+              class="search-field"
+              autoFocus="on"
+              onChange={updateCity}
+              required
+            />
+            <input type="submit" value="Search" class="search-button" />
+          </form>
+        </div>
       </div>
     );
   } else {

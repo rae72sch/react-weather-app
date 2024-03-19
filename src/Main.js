@@ -1,6 +1,8 @@
 import React from "react";
 import FeelsLikeRounded from "./FeelsLikeRounded";
 import MainTemperature from "./MainTemperature";
+import DayTime from "./DayTime";
+
 import "./Main.css";
 
 export default function Main(props) {
@@ -17,7 +19,9 @@ export default function Main(props) {
           </div>
           <div className="middle-column">
             <span className="main-temp"><MainTemperature celsius={props.data.temperature} /></span>
-            <div className="day-time">Friday 10:20</div>
+            <div className="day-time">
+              <DayTime date={props.data.date} />
+            </div>
           </div>
           <div class="right-column">
             Humidity: {props.data.humidity}%

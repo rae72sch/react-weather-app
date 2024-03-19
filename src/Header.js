@@ -1,12 +1,12 @@
 import React from "react";
 import "./Header.css";
-import drizzle from "./images/drizzle-cropped.svg";
+import WeatherIcon from "./WeatherIcon";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <div>
       <div className="big-weather-emoji">
-        <img src={drizzle} alt="drizzle" className="mt-4" />
+        <WeatherIcon code={props.data.icon} />
       </div>
     </div>
   );
