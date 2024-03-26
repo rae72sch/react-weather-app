@@ -1,9 +1,15 @@
+.header {
+  position: relative;
+  z-index: 3;
+}
+
 .search {
   text-align: center;
   border-bottom: 0.5px solid #9e9ebf;
-  margin: 30px;
-  padding-bottom: 25px;
   font-size: 14px;
+  background-color: #79d1cf;
+  margin-top: -80px;
+  border-radius: 10px;
 }
 
 .search-field {
@@ -20,7 +26,8 @@
   background-color: rgba(251, 224, 234, 0.6);
   margin-left: 5px;
   font-size: 16px;
-  color: #52658b;
+  color: white;
+  background-color: teal;
   border: 0;
   border-radius: 5px;
   padding: 13px;

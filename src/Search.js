@@ -24,7 +24,7 @@ export default function Search(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    Search();
+    search();
   }
 
   function updateCity(event) {
@@ -43,7 +43,7 @@ export default function Search(props) {
         <div className="header">
           <Header data={weatherData} />
         </div>
-        <div className="search">
+        <div className="search pt-5 pb-4">
           <Main data={weatherData} />
           <form onSubmit={handleSubmit}>
             <input

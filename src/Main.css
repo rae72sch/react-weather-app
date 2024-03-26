@@ -1,3 +1,12 @@
+.main {
+  /* color: #000090; */
+  color: #444;
+}
+
+.main h1 {
+  font-size: 60px;
+}
+
 .current {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -25,9 +34,5 @@
 }
 
 .main-temp {
-  font-size: 50px;
-}
-
-.day-time {
-  padding-top: 10px;
+  font-size: 45px;
 }

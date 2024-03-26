@@ -1,14 +1,3 @@
-// import React from "react";
-
-// export default function FeelsLikeRounded(props) {
-//   return (
-//     <div className="FeelsLike">
-//       Feels like: {Math.round(props.celsius)}
-//       <span className="unit">°c</span>
-//     </div>
-//   );
-// }
-
 import React, { useState } from "react";
 
 export default function MainTemperature(props) {
@@ -31,26 +20,34 @@ export default function MainTemperature(props) {
   if (unit === "celsius") {
     return (
       <div className="Temperature">
-        Feels Like: {" "}
-        {Math.round(props.celsius)}
-        <span className="unit">°c |</span>
+        <span>
+          Feels Like: {Math.round(props.celsius)}
+        </span>
+        <span className="unit">°c </span>
         <span className="smallUnit">
-          <a href="/" onClick={showFarenheit}>
+          (
+          <a href="/" onClick={showFarenheit} className="text-decoration-none fw-lighter">
             °f
           </a>
+          )
         </span>
       </div>
     );
   } else {
     return (
       <div className="Temperature">
-        Feels Like: {" "}
-        {Math.round(farenheit())}
+        Feels Like: {Math.round(farenheit())}
         <span className="unit">
-          °f |
-          <a href="/" onClick={showCelsius}>
+          °f
+          (
+          <a
+            href="/"
+            onClick={showCelsius}
+            className="text-decoration-none fw-lighter"
+          >
             °c
           </a>
+          )
         </span>
       </div>
     );

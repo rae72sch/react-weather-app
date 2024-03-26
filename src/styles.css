@@ -5,3 +5,24 @@
   max-width: 900px;
 }
 
+#backgroundVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (max-width: 750px) {
+  #backgroundVideo {
+    display: none;
+  }
+  body {
+    background: url("images/cloudsSunRays.jpg") no-repeat;
+    /* background-size: cover; */
+  }
+}

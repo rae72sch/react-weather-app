@@ -1,0 +1,9 @@
+.footer {
+  display: block;
+  margin: 0 auto;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  max-width: 40%;
+  text-align: center;
+  line-height: 12px;
+}
