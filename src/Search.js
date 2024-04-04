@@ -12,6 +12,7 @@ export default function Search(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       icon: response.data.weather[0].icon,
       city: response.data.name,
       description: response.data.weather[0].description,
@@ -58,7 +59,7 @@ export default function Search(props) {
             <input type="submit" value="Search" className="search-button" />
           </form>
           <div className="forecast mt-5">
-            <Forecast />
+            <Forecast coordinates={weatherData.coordinates} />
           </div>
         </div>
       </div>
