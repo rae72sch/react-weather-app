@@ -1,6 +1,5 @@
 import "./styles.css";
 import Search from "./Search";
-// import Forecast from "./Forecast";
 import Footer from "./Footer";
 
 import cloudsSunRays from "./images/cloudsSunRays.jpg";
@@ -14,7 +13,7 @@ export default function App() {
       </video>
 
       <Search defaultCity="London" />
-      {/* <Forecast /> */}
+
       <Footer />
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Header from "./Header";
 import Main from "./Main";
+import Forecast from "./Forecast";
 import "./Search.css";
 
 export default function Search(props) {
@@ -56,6 +57,9 @@ export default function Search(props) {
             />
             <input type="submit" value="Search" className="search-button" />
           </form>
+          <div className="forecast mt-5">
+            <Forecast />
+          </div>
         </div>
       </div>
     );

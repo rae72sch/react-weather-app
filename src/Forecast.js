@@ -1,33 +1,20 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
+
 import "./Forecast.css";
 
 export default function Forecast() {
   return (
-    <div className="weather-five-day">
-      <div className="weather-forecast-day">
-        <h5>Sat</h5>
-        <span className="icon">🌤️</span>
-        <p className="temp-range">10° / 8°</p>
-      </div>
-      <div className="weather-forecast-day">
-        <h5>Sun</h5>
-        <span className="icon">🌧️</span>
-        <p className="temp-range">11° / 8°</p>
-      </div>
-      <div className="weather-forecast-day">
-        <h5>Mon</h5>
-        <span className="icon">🌧️</span>
-        <p className="temp-range">10° / 7°</p>
-      </div>
-      <div className="weather-forecast-day">
-        <h5>Tues</h5>
-        <span className="icon">🌤️</span>
-        <p className="temp-range">10° / 7°</p>
-      </div>
-      <div className="weather-forecast-day">
-        <h5>Wed</h5>
-        <span className="icon">🌤️</span>
-        <p className="temp-range">10° / 6°</p>
+    <div className="weather-five-day pt-5 pb-5">
+      <div className="row">
+        <div className="col weather-forecast-day">
+          <div className="day">Tues</div>
+          <WeatherIcon code="09d" size={20} />
+          <div className="Forecast-temperatures">
+            <span className="Forecast-temp-max">19°</span>
+            <span className="Forecast-temp-min">10°</span>
+          </div>
+        </div>
       </div>
     </div>
   );
