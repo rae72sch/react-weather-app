@@ -50,6 +50,7 @@ export default function Search(props) {
           <form onSubmit={handleSubmit}>
             <input
               type="search"
+              id="search"
               placeholder="Search for a city..."
               className="search-field"
               autoFocus="on"

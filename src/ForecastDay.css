@@ -1,0 +1,16 @@
+.five-day {
+  color: #444;
+}
+
+.day {
+  font-size: 16px;
+}
+
+.weather-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-icon img {
+  height: 50px;
+}

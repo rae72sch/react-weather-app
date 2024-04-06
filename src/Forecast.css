@@ -1,14 +1,10 @@
 .weather-five-day {
-  margin: 0 20px;
-  display: flex;
-  justify-content: space-evenly;
   background-color: #459496;
   border-radius: 20px;
-  max-width: 80%;
 }
 
 .weather-forecast-day {
   background-color: #79d1cf;
-  padding: 10px;
+  padding: 10px 0px;
   border-radius: 20px;
 }

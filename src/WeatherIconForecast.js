@@ -12,8 +12,7 @@ import showersNight from "./images/showersNight.svg";
 import rain from "./images/rain.svg";
 import thunderstorms from "./images/thunderstorms.svg";
 import snow from "./images/snow.svg";
-import foggy from "./images/foggy.svg"
-
+import foggy from "./images/foggy.svg";
 
 export default function WeatherIcon(props) {
   const codeMapping = {
@@ -37,5 +36,12 @@ export default function WeatherIcon(props) {
     "50n": foggy,
   };
 
-  return <img className="icon" src={codeMapping[props.code]} size={props.size} alt={props.alt} />
+  return (
+    <img
+      className="icon"
+      src={codeMapping[props.code]}
+      size={props.size}
+      alt={props.alt}
+    />
+  );
 }
