@@ -1,6 +1,7 @@
 import React from "react";
-import "./Header.css";
 import WeatherIcon from "./WeatherIcon";
+
+import "./Header.css";
 
 export default function Header(props) {
   return (
